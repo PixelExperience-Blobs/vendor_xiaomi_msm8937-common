@@ -65,10 +65,10 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["graphics_sdm/vendor/lib/libsdm-disp-vndapis.so"],
+			srcs: ["proprietary/vendor/lib/libsdm-disp-vndapis.so"],
 		},
 		android_arm64: {
-			srcs: ["graphics_sdm/vendor/lib64/libsdm-disp-vndapis.so"],
+			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -188,7 +188,7 @@ android_app_import {
 android_app_import {
 	name: "QtiTelephonyService",
 	owner: "xiaomi",
-	apk: "ril_p/product/app/QtiTelephonyService/QtiTelephonyService.apk",
+	apk: "proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -211,7 +211,7 @@ android_app_import {
 android_app_import {
 	name: "ims",
 	owner: "xiaomi",
-	apk: "ims_q/product/priv-app/ims/ims.apk",
+	apk: "proprietary/product/priv-app/ims/ims.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -223,7 +223,7 @@ android_app_import {
 android_app_import {
 	name: "qcrilmsgtunnel",
 	owner: "xiaomi",
-	apk: "ril_q/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	apk: "proprietary/product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -238,14 +238,6 @@ dex_import {
 	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
-cc_prebuilt_binary {
-	name: "chargeonlymode",
-	owner: "xiaomi",
-	srcs: ["proprietary/vendor/bin/chargeonlymode"],
-	prefer: true,
-	soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
 	name: "libqmiservices",
 	owner: "xiaomi",
@@ -254,10 +246,10 @@ cc_prebuilt_library_shared {
 	},
 	target: {
 		android_arm: {
-			srcs: ["qmi_p/vendor/lib/libqmiservices.so"],
+			srcs: ["proprietary/vendor/lib/libqmiservices.so"],
 		},
 		android_arm64: {
-			srcs: ["qmi_p/vendor/lib64/libqmiservices.so"],
+			srcs: ["proprietary/vendor/lib64/libqmiservices.so"],
 		},
 	},
 	compile_multilib: "both",
